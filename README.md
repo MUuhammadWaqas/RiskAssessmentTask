@@ -4,37 +4,36 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-## Step 1: Start the Metro Server
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+
+## Step 1: Clone  Application
+
+First, clone the RiskAssessmentApp repository from GitHub:
+
+
+
+
+```bash
+
+ git clone https://github.com/MUuhammadWaqas/RiskAssessmentTask
+
+
+```
+
+## Step 2: Install Dependencies
+
+Use Yarn to install the necessary packages:
 
 ```bash
 # using npm
-npm start
+npm i
 
 # OR using Yarn
-yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
+yarn 
 
 ### For iOS
 
-```bash
 # using npm
 npm run ios
 
@@ -42,38 +41,85 @@ npm run ios
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Step 3: Setup IOS Project
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+Navigate to the iOS directory and install CocoaPods dependencies:
 
-## Step 3: Modifying your App
 
-Now that you have successfully run the app, let's modify it.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+```bash
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+cd ios
+pod install
+cd ..
 
-## Congratulations! :tada:
 
-You've successfully run and modified your React Native App. :partying_face:
 
-### Now what?
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+```
 
-# Troubleshooting
+## Step 4: Run the Project
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
-# Learn More
+## For IOS:
 
-To learn more about React Native, take a look at the following resources:
+```bash
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+yarn ios
+
+
+
+
+```
+
+## ForAndroid:
+
+```bash
+
+yarn android
+
+
+
+
+```
+
+## Step 4: Run the Test Cases 
+
+After the project is running, you can execute the test cases using Jest:
+
+
+```bash
+
+yarn test
+
+
+
+
+```
+
+## Notes
+•	Ensure your development environment is set up for React Native. Follow the official React Native environment setup guide if needed.
+•	The project uses the latest version of React Native, which requires the latest version of Node.js. Ensure compatibility by checking Node.js version:
+
+
+```bash
+node -v
+
+
+
+
+```
+
+## Additional Steps to Open .xcworkspace in Xcode:
+
+1.	Navigate to iOS Directory After installing CocoaPods dependencies, navigate to the ios directory:
+sh
+Copy code
+cd ios
+2.	Open .xcworkspace File Open the .xcworkspace file in Xcode. You can do this either by double-clicking the file in Finder or by using the open command in the terminal:
+sh
+Copy code
+open RiskAssessmentApp.xcworkspace
+3.	Build and Run in Xcode Once Xcode opens with the project, select a simulator or a connected device from the toolbar.
+4.	Run the App Click on the "Run" button (a play icon) in Xcode to build and run the app on the selected simulator or device.
+By following these steps, you should be able to clone, set up, run, and test the RiskAssessmentApp successfully. If you encounter any issues, consult the project's README or open an issue on GitHub. 
