@@ -44,7 +44,7 @@ const QuestionnaireScreen: React.FC<{navigation: any}> = ({navigation}) => {
   }, [dispatch]);
 
   const renderItem = useCallback(
-    ({item}: any) => (
+    ({item}: QuestionCardProps) => (
       <Question
         {...{item}}
         selectedOption={

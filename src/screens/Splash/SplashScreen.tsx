@@ -9,6 +9,7 @@ const SplashScreen: React.FC = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
+      console.log('Dispatching reset action');
       navigation.dispatch(
         CommonActions.reset({
           routes: [{name: 'Questionnaire'}],
@@ -20,11 +21,12 @@ const SplashScreen: React.FC = () => {
   }, [navigation]);
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="splash-container">
       <Image
         source={require('../../assets/images/RAK1.png')}
         style={styles.image}
         resizeMode="contain"
+        testID="splash-image"
       />
     </View>
   );

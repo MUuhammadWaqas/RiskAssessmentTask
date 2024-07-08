@@ -111,8 +111,8 @@ describe('QuestionnaireScreen', () => {
       const [title, message, buttons] = Alert.alert.mock.calls[0];
       expect(title).toBe('Incomplete Test');
       expect(message).toBe('Please answer all questions before submitting.');
-
-      const okButton = buttons.find((button: any) => button.text === 'Ok');
+      //@ts-ignore
+      const okButton = buttons.find(button => button.text === 'Ok');
       okButton.onPress();
     });
 

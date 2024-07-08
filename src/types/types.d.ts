@@ -20,7 +20,7 @@ interface CustomButtonProps {
   width?: string | number;
   backgroundColor?: string;
   textColor?: string;
-  testID?:string
+  testID?: string;
 }
 
 interface RiskCategory {
